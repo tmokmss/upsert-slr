@@ -1,4 +1,5 @@
 import { awscdk } from 'projen';
+
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'tmokmss',
   authorAddress: 'tmokmss@users.noreply.github.com',
@@ -18,7 +19,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'aws-cdk@^2.38.0',
     'aws-cdk-lib@^2.38.0',
     'constructs@^10.0.5',
-    '@aws-cdk/integ-runner@^2.82.0-alpha.0',
+    '@aws-cdk/integ-runner',
     '@aws-cdk/integ-tests-alpha',
   ],
   peerDependencyOptions: {
@@ -27,9 +28,9 @@ const project = new awscdk.AwsCdkConstructLibrary({
 });
 
 // Bundle custom resource handler Lambda code
-project.projectBuild.compileTask.prependExec('yarn install  --frozen-lockfile && yarn build', {
+project.projectBuild.compileTask.prependExec('yarn install --frozen-lockfile && yarn build', {
   cwd: 'lambda',
 });
 // Run integ-test
-project.projectBuild.testTask.exec('yarn tsc -p tsconfig.dev.json && yarn integ-runner');
+project.projectBuild.testTask.exec('yarn integ-runner');
 project.synth();

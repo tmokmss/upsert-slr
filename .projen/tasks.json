@@ -87,7 +87,7 @@
       "description": "Only compile",
       "steps": [
         {
-          "exec": "yarn install  --frozen-lockfile && yarn build",
+          "exec": "yarn install --frozen-lockfile && yarn build",
           "cwd": "lambda"
         },
         {
@@ -232,7 +232,7 @@
           "spawn": "eslint"
         },
         {
-          "exec": "yarn tsc -p tsconfig.dev.json && yarn integ-runner"
+          "exec": "yarn integ-runner"
         }
       ]
     },
