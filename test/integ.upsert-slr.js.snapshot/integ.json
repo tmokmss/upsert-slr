@@ -1,0 +1,13 @@
+{
+  "version": "32.0.0",
+  "testCases": {
+    "Test/DefaultTest": {
+      "stacks": [
+        "IntegTest"
+      ],
+      "diffAssets": true,
+      "assertionStack": "Test/DefaultTest/DeployAssert",
+      "assertionStackName": "TestDefaultTestDeployAssert12909640"
+    }
+  }
+}
