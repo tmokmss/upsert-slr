@@ -100,7 +100,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/21fbb51d7b23f6a6c262b46a9caee79d744a3ac019fd45422d988b96d44b2a22.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fa3f1149e08b911e8a84a94fa00c74c20a22871308cf4ec2922bce04b5e759d3.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -116,6 +116,42 @@
         "TestDefaultTestDeployAssert12909640.assets"
       ],
       "metadata": {
+        "/Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17"
+          }
+        ],
+        "/Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/AssertionResults": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssertionResultsAwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17"
+          }
+        ],
+        "/Test/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction1488541a7b23466481b69b4408076b81Role37ABCE73"
+          }
+        ],
+        "/Test/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Handler": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SingletonFunction1488541a7b23466481b69b4408076b81HandlerCD40AE9F"
+          }
+        ],
+        "/Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/Default/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f"
+          }
+        ],
+        "/Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/AssertionResults": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssertionResultsAwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f"
+          }
+        ],
         "/Test/DefaultTest/DeployAssert/BootstrapVersion": [
           {
             "type": "aws:cdk:logicalId",

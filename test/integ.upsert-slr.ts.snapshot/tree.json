@@ -290,6 +290,148 @@
                 "id": "DeployAssert",
                 "path": "Test/DefaultTest/DeployAssert",
                 "children": {
+                  "AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17": {
+                    "id": "AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17",
+                    "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17",
+                    "children": {
+                      "SdkProvider": {
+                        "id": "SdkProvider",
+                        "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/SdkProvider",
+                        "children": {
+                          "AssertionsProvider": {
+                            "id": "AssertionsProvider",
+                            "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/SdkProvider/AssertionsProvider",
+                            "constructInfo": {
+                              "fqn": "constructs.Construct",
+                              "version": "10.2.40"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/integ-tests-alpha.AssertionsProvider",
+                          "version": "2.82.0-alpha.0"
+                        }
+                      },
+                      "Default": {
+                        "id": "Default",
+                        "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/Default",
+                        "children": {
+                          "Default": {
+                            "id": "Default",
+                            "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/Default/Default",
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.CfnResource",
+                              "version": "2.82.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CustomResource",
+                          "version": "2.82.0"
+                        }
+                      },
+                      "AssertionResults": {
+                        "id": "AssertionResults",
+                        "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles1c3f30265bed12fb9037dc4dd3cb2b17/AssertionResults",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CfnOutput",
+                          "version": "2.82.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/integ-tests-alpha.AwsApiCall",
+                      "version": "2.82.0-alpha.0"
+                    }
+                  },
+                  "SingletonFunction1488541a7b23466481b69b4408076b81": {
+                    "id": "SingletonFunction1488541a7b23466481b69b4408076b81",
+                    "path": "Test/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81",
+                    "children": {
+                      "Staging": {
+                        "id": "Staging",
+                        "path": "Test/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Staging",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.AssetStaging",
+                          "version": "2.82.0"
+                        }
+                      },
+                      "Role": {
+                        "id": "Role",
+                        "path": "Test/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Role",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CfnResource",
+                          "version": "2.82.0"
+                        }
+                      },
+                      "Handler": {
+                        "id": "Handler",
+                        "path": "Test/DefaultTest/DeployAssert/SingletonFunction1488541a7b23466481b69b4408076b81/Handler",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CfnResource",
+                          "version": "2.82.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "constructs.Construct",
+                      "version": "10.2.40"
+                    }
+                  },
+                  "AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f": {
+                    "id": "AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f",
+                    "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f",
+                    "children": {
+                      "SdkProvider": {
+                        "id": "SdkProvider",
+                        "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/SdkProvider",
+                        "children": {
+                          "AssertionsProvider": {
+                            "id": "AssertionsProvider",
+                            "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/SdkProvider/AssertionsProvider",
+                            "constructInfo": {
+                              "fqn": "constructs.Construct",
+                              "version": "10.2.40"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "@aws-cdk/integ-tests-alpha.AssertionsProvider",
+                          "version": "2.82.0-alpha.0"
+                        }
+                      },
+                      "Default": {
+                        "id": "Default",
+                        "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/Default",
+                        "children": {
+                          "Default": {
+                            "id": "Default",
+                            "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/Default/Default",
+                            "constructInfo": {
+                              "fqn": "aws-cdk-lib.CfnResource",
+                              "version": "2.82.0"
+                            }
+                          }
+                        },
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CustomResource",
+                          "version": "2.82.0"
+                        }
+                      },
+                      "AssertionResults": {
+                        "id": "AssertionResults",
+                        "path": "Test/DefaultTest/DeployAssert/AwsApiCallIAMlistRoles0f97556d9ad52a7b3520b73cc922160f/AssertionResults",
+                        "constructInfo": {
+                          "fqn": "aws-cdk-lib.CfnOutput",
+                          "version": "2.82.0"
+                        }
+                      }
+                    },
+                    "constructInfo": {
+                      "fqn": "@aws-cdk/integ-tests-alpha.AwsApiCall",
+                      "version": "2.82.0-alpha.0"
+                    }
+                  },
                   "BootstrapVersion": {
                     "id": "BootstrapVersion",
                     "path": "Test/DefaultTest/DeployAssert/BootstrapVersion",

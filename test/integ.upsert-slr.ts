@@ -1,4 +1,4 @@
-import { IntegTest } from '@aws-cdk/integ-tests-alpha';
+import { ExpectedResult, IntegTest } from '@aws-cdk/integ-tests-alpha';
 import { Stack, StackProps, App } from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { ServiceLinkedRole } from '../src';
@@ -27,7 +27,15 @@ class TestStack extends Stack {
 
 const stack = new TestStack(app, 'IntegTest');
 
-new IntegTest(app, 'Test', {
+const integ = new IntegTest(app, 'Test', {
   testCases: [stack],
   diffAssets: true,
+});
+
+['es', 'elasticbeanstalk'].forEach(service=> {
+  const path = `/aws-service-role/${service}.amazonaws.com/`;
+  const message = integ.assertions.awsApiCall('IAM', 'listRoles', {
+    PathPrefix: path,
+  });
+  message.assertAtPath('Roles.0.Path', ExpectedResult.stringLikeRegexp(path));
 });
