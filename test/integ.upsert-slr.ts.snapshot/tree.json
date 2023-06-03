@@ -144,32 +144,6 @@
                   "version": "2.82.0"
                 }
               },
-              "Code": {
-                "id": "Code",
-                "path": "IntegTest/UpsertSlrCustomResourceHandler8f7be66a3315474baea16ceca43d27c3/Code",
-                "children": {
-                  "Stage": {
-                    "id": "Stage",
-                    "path": "IntegTest/UpsertSlrCustomResourceHandler8f7be66a3315474baea16ceca43d27c3/Code/Stage",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.AssetStaging",
-                      "version": "2.82.0"
-                    }
-                  },
-                  "AssetBucket": {
-                    "id": "AssetBucket",
-                    "path": "IntegTest/UpsertSlrCustomResourceHandler8f7be66a3315474baea16ceca43d27c3/Code/AssetBucket",
-                    "constructInfo": {
-                      "fqn": "aws-cdk-lib.aws_s3.BucketBase",
-                      "version": "2.82.0"
-                    }
-                  }
-                },
-                "constructInfo": {
-                  "fqn": "aws-cdk-lib.aws_s3_assets.Asset",
-                  "version": "2.82.0"
-                }
-              },
               "Resource": {
                 "id": "Resource",
                 "path": "IntegTest/UpsertSlrCustomResourceHandler8f7be66a3315474baea16ceca43d27c3/Resource",
@@ -177,10 +151,7 @@
                   "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
                   "aws:cdk:cloudformation:props": {
                     "code": {
-                      "s3Bucket": {
-                        "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
-                      },
-                      "s3Key": "a8d2f49605640022b22b196311fd5d6bf31bb36bfb071dfbc9e2f841cafd9a8e.zip"
+                      "zipFile": "\"use strict\";var i=Object.defineProperty;var l=Object.getOwnPropertyDescriptor;var d=Object.getOwnPropertyNames;var p=Object.prototype.hasOwnProperty;var m=(e,s)=>{for(var r in s)i(e,r,{get:s[r],enumerable:!0})},u=(e,s,r,a)=>{if(s&&typeof s==\"object\"||typeof s==\"function\")for(let t of d(s))!p.call(e,t)&&t!==r&&i(e,t,{get:()=>s[t],enumerable:!(a=l(s,t))||a.enumerable});return e};var S=e=>u(i({},\"__esModule\",{value:!0}),e);var y={};m(y,{handler:()=>R});module.exports=S(y);var o=require(\"@aws-sdk/client-iam\"),n=require(\"timers/promises\"),g=new o.IAMClient({}),R=async(e,s)=>{try{switch(e.RequestType){case\"Create\":console.log(`trying to create a service linked role for ${e.ResourceProperties.awsServiceName}`);let r=new o.CreateServiceLinkedRoleCommand({AWSServiceName:e.ResourceProperties.awsServiceName,Description:e.ResourceProperties.description,CustomSuffix:e.ResourceProperties.customSuffix});await g.send(r),console.log(\"the service linked role created successfully, now waiting for IAM propagation\"),await(0,n.setTimeout)(e.ResourceProperties.waitTimeSeconds*1e3);break;case\"Update\":break;case\"Delete\":break}await c(\"SUCCESS\",e,s)}catch(r){r instanceof o.InvalidInputException?(console.log(`The service linked role seems to already exist, skipping the creation... ${r.message}`),await c(\"SUCCESS\",e,s)):await c(\"FAILED\",e,s,r.message)}},c=async(e,s,r,a)=>{let t=JSON.stringify({Status:e,Reason:a??\"See the details in CloudWatch Log Stream: \"+r.logStreamName,PhysicalResourceId:r.logStreamName,StackId:s.StackId,RequestId:s.RequestId,LogicalResourceId:s.LogicalResourceId,NoEcho:!1,Data:{}});await(await fetch(s.ResponseURL,{method:\"PUT\",body:t,headers:{\"Content-Type\":\"\",\"Content-Length\":t.length.toString()}})).text()};0&&(module.exports={handler});\n"
                     },
                     "role": {
                       "Fn::GetAtt": [

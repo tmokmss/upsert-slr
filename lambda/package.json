@@ -5,7 +5,7 @@
     "type": "module",
     "main": "index.js",
     "scripts": {
-        "build": "esbuild index.ts --bundle --outdir=./dist --platform=node --external:@aws-sdk/*"
+        "build": "esbuild index.ts --bundle --minify --outdir=./dist --platform=node --external:@aws-sdk/*"
     },
     "devDependencies": {
         "@aws-sdk/client-iam": "^3.344.0",

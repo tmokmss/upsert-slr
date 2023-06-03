@@ -19,13 +19,15 @@ export const handler: Handler<Event> = async (event, context) => {
   try {
     switch (event.RequestType) {
       case 'Create':
+        console.log(`trying to create a service linked role for ${event.ResourceProperties.awsServiceName}`);
         const command = new CreateServiceLinkedRoleCommand({
           AWSServiceName: event.ResourceProperties.awsServiceName,
           Description: event.ResourceProperties.description,
+          CustomSuffix: event.ResourceProperties.customSuffix,
         });
         await client.send(command);
         console.log('the service linked role created successfully, now waiting for IAM propagation');
-        await setTimeout(60 * 1000);
+        await setTimeout(event.ResourceProperties.waitTimeSeconds * 1000);
         break;
       case 'Update':
         break;
@@ -56,7 +58,7 @@ const sendStatus = async (status: 'SUCCESS' | 'FAILED', event: Event, context: a
     Data: {},
   });
 
-  await fetch(event.ResponseURL, {
+  const res = await fetch(event.ResponseURL, {
     method: 'PUT',
     body: responseBody,
     headers: {
@@ -64,4 +66,5 @@ const sendStatus = async (status: 'SUCCESS' | 'FAILED', event: Event, context: a
       'Content-Length': responseBody.length.toString(),
     },
   });
+  await res.text();
 };
