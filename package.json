@@ -1,5 +1,6 @@
 {
   "name": "upsert-slr",
+  "description": "Manage AWS service-linked roles in a better way.",
   "repository": {
     "type": "git",
     "url": "https://github.com/tmokmss/upsert-slr.git"

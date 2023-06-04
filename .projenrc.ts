@@ -11,6 +11,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   license: 'MIT',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/tmokmss/upsert-slr.git',
+  description: 'Manage AWS service-linked roles in a better way.',
   keywords: ['aws', 'cdk', 'iam', 'aws-cdk'],
   eslintOptions: {
     dirs: ['src'],
