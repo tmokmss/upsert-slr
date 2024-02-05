@@ -17,14 +17,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
     dirs: ['src'],
     ignorePatterns: ['example/**/*', 'lambda/**/*', 'test/assets/**/*', 'test/*.snapshot/**/*', '*.d.ts'],
   },
+  publishToPypi: {
+    distName: 'upsert-slr',
+    module: 'upsert_slr',
+  },
   gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*', 'test/cdk.out'],
-  devDeps: [
-    'aws-cdk@^2.38.0',
-    'aws-cdk-lib@^2.38.0',
-    'constructs@^10.0.5',
-    '@aws-cdk/integ-runner',
-    '@aws-cdk/integ-tests-alpha',
-  ],
+  devDeps: ['aws-cdk@^2.38.0', 'aws-cdk-lib@^2.38.0', 'constructs@^10.0.5', '@aws-cdk/integ-runner', '@aws-cdk/integ-tests-alpha'],
   peerDependencyOptions: {
     pinnedDevDependency: false,
   },
