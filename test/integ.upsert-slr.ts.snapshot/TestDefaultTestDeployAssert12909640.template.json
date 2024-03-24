@@ -14,13 +14,13 @@
     "expected": "{\"$StringLike\":\"/aws-service-role/es.amazonaws.com/\"}",
     "actualPath": "Roles.0.Path",
     "parameters": {
-     "PathPrefix": "/aws-service-role/es.amazonaws.com/"
+     "PathPrefix": "\"/aws-service-role/es.amazonaws.com/\""
     },
     "flattenResponse": "true",
     "outputPaths": [
      "Roles.0.Path"
     ],
-    "salt": "1685768071421"
+    "salt": "1711255646416"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete"
@@ -78,12 +78,12 @@
   "SingletonFunction1488541a7b23466481b69b4408076b81HandlerCD40AE9F": {
    "Type": "AWS::Lambda::Function",
    "Properties": {
-    "Runtime": "nodejs14.x",
+    "Runtime": "nodejs18.x",
     "Code": {
      "S3Bucket": {
       "Fn::Sub": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}"
      },
-     "S3Key": "ae370e1010629b78f494346f49ceef3ab2875718f20e6c808114e6aa770c7bf3.zip"
+     "S3Key": "d4f7205622555f2d0536878c2577ce0c2568fd87e9525862b64a30220dc725aa.zip"
     },
     "Timeout": 120,
     "Handler": "index.handler",
@@ -109,13 +109,13 @@
     "expected": "{\"$StringLike\":\"/aws-service-role/elasticbeanstalk.amazonaws.com/\"}",
     "actualPath": "Roles.0.Path",
     "parameters": {
-     "PathPrefix": "/aws-service-role/elasticbeanstalk.amazonaws.com/"
+     "PathPrefix": "\"/aws-service-role/elasticbeanstalk.amazonaws.com/\""
     },
     "flattenResponse": "true",
     "outputPaths": [
      "Roles.0.Path"
     ],
-    "salt": "1685768071421"
+    "salt": "1711255646417"
    },
    "UpdateReplacePolicy": "Delete",
    "DeletionPolicy": "Delete"
