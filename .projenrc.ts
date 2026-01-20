@@ -6,7 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   majorVersion: 1,
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
-  jsiiVersion: '~5.8.0',
+  jsiiVersion: '~5.9.0',
   name: 'upsert-slr',
   license: 'MIT',
   projenrcTs: true,
