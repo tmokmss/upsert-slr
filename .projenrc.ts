@@ -20,8 +20,10 @@ const project = new awscdk.AwsCdkConstructLibrary({
   publishToPypi: {
     distName: 'upsert-slr',
     module: 'upsert_slr',
+    trustedPublishing: true,
   },
   gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*', 'cdk.out/'],
+  npmTrustedPublishing: true,
   devDeps: [
     'aws-cdk-lib@^2.163.1',
     'aws-cdk@^2.163.1',
