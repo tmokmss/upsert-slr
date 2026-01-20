@@ -33,7 +33,7 @@ jspm_packages/
 *.js
 *.d.ts
 !test/integ.*.snapshot/**/*
-test/cdk.out
+cdk.out/
 /test-reports/
 junit.xml
 /coverage/
