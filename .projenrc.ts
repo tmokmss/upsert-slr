@@ -6,7 +6,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   majorVersion: 1,
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
-  jsiiVersion: '~5.5.0',
+  jsiiVersion: '~5.8.0',
   name: 'upsert-slr',
   license: 'MIT',
   projenrcTs: true,
@@ -21,7 +21,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     distName: 'upsert-slr',
     module: 'upsert_slr',
   },
-  gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*', 'test/cdk.out'],
+  gitignore: ['*.js', '*.d.ts', '!test/integ.*.snapshot/**/*', 'cdk.out/'],
   devDeps: [
     'aws-cdk-lib@^2.163.1',
     'aws-cdk@^2.163.1',

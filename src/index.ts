@@ -32,7 +32,7 @@ export class ServiceLinkedRole extends Construct {
 
     const handler = new SingletonFunction(this, 'CustomResourceHandler', {
       // Use raw string to avoid from tightening CDK version requirement
-      runtime: new Runtime('nodejs20.x', RuntimeFamily.NODEJS, { supportsInlineCode: true }),
+      runtime: new Runtime('nodejs24.x', RuntimeFamily.NODEJS, { supportsInlineCode: true }),
       code: Code.fromInline(readFileSync(join(__dirname, '../', 'lambda', 'dist', 'index.js')).toString()),
       handler: 'index.handler',
       uuid: '8f7be66a-3315-474b-aea1-6ceca43d27c3', // generated for this construct
